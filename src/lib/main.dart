@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:isence/ui/views/auth/loginscreen.dart';
 import 'package:isence/ui/views/auth/signupscreen.dart';
-import 'ui/route/route.dart' ;
+import 'ui/route/route.dart' as route;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,15 +16,22 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: Size(1400, 875),
       builder: () => GetMaterialApp(
-        //  title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
-           fontFamily: "SF Pro",
+          textTheme: TextTheme(button: TextStyle(fontSize: 45.sp)),
         ),
+        builder: (context, widget) {
+          ScreenUtil.setContext(context);
+          return MediaQuery(
+            //Setting font does not change with system font size
+            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+            child: widget!,
+          );
+        },
         home: SignupScreen(),
-        initialRoute: signup,
-        getPages: getPages,
+        initialRoute: route.signup,
+        getPages: route.getPages,
       ),
     );
   }
