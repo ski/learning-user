@@ -13,3 +13,18 @@ BoxDecoration boxDecoration=BoxDecoration(
                       ),
                     ],
                   );
+
+
+                  BoxDecoration CardBox() {
+    return BoxDecoration(
+                        borderRadius: BorderRadius.circular(4.r),
+                        color: AppColors.isense_white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.isense_primary.withOpacity(0.05),
+                            offset: Offset(0, 6),
+                            blurRadius: 7,
+                          ),
+                        ],
+                      );
+  }

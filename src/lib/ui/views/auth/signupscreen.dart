@@ -4,9 +4,8 @@ import 'package:get/get.dart';
 import 'package:isence/const/app_colors.dart';
 import 'package:isence/ui/route/route.dart';
 
-
-
 import 'package:isence/ui/widgets/authTextfield.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 // ignore: use_key_in_widget_constructors
 class SignupScreen extends StatefulWidget {
@@ -15,6 +14,9 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +33,12 @@ class _SignupScreenState extends State<SignupScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    ElevatedButton(
+                      onPressed: () => Get.toNamed(coursePlayVideo),
+                      child: Text("Course Play Video Screen"),
+                    ),
+                   
+                    Divider(),
                     Image.asset(
                       "assets/logo/logo.png",
                       height: 32.h,
@@ -145,9 +153,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         hint: "suhail@isense.u",
                         prefixicon: Icons.mail,
                         inputType: TextInputType.emailAddress,
-                        obsecuretext: false
-                        ),
-                   
+                        obsecuretext: false),
                     SizedBox(
                       height: 25.h,
                     ),
@@ -155,7 +161,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       height: 55.h,
                       width: double.infinity,
                       child: TextButton(
-                        onPressed: ()=>Get.toNamed(otp),
+                        onPressed: () => Get.toNamed(otp),
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                               AppColors.isense_button,
@@ -189,7 +195,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             ),
                           ),
                           TextButton(
-                            onPressed:()=>Get.toNamed(login),
+                            onPressed: () => Get.toNamed(login),
                             child: Text(
                               "Signin",
                               style: TextStyle(

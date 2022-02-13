@@ -61,6 +61,8 @@ class _MainProfilePageState extends State<MainProfilePage> {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
+
+
             //Topbar section starts here
             Container(
               height: 90.h,
@@ -312,6 +314,7 @@ class _MainProfilePageState extends State<MainProfilePage> {
               ),
             ),
             //Topbar section ends here
+            
             PageNameContainer(currentTitle()),
             Container(
               height: 690.h,
@@ -654,6 +657,7 @@ class _MainProfilePageState extends State<MainProfilePage> {
               ),
             )
             //Footer section ends here
+         
           ],
         ),
       ),

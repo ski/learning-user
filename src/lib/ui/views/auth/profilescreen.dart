@@ -70,7 +70,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         hint: "Suhail Mazoor",
                         prefixicon: FontAwesomeIcons.user,
                         inputType: TextInputType.text,
-                        obsecuretext: true),
+                        obsecuretext: false),
                     SizedBox(
                       height: 18.h,
                     ),
@@ -89,7 +89,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         hint: "99794 09958",
                         prefixicon: FontAwesomeIcons.user,
                         inputType: TextInputType.text,
-                        obsecuretext: true),
+                        obsecuretext: false),
                     SizedBox(
                       height: 18.h,
                     ),
@@ -122,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         hint: "Dubai",
                         prefixicon: FontAwesomeIcons.city,
                         inputType: TextInputType.text,
-                        obsecuretext: true),
+                        obsecuretext: false),
                     SizedBox(
                       height: 25.h,
                     ),

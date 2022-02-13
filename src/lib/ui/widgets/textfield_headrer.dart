@@ -17,3 +17,20 @@ Widget TextfieldHeader(String header) {
     ),
   );
 }
+
+
+Widget TextfieldHeaderTwo(String header) {
+  return Padding(
+    padding: EdgeInsets.only(top: 8.h, bottom: 7.h),
+    child: Text(
+      header,
+      style: TextStyle(
+        fontFamily: 'SF Pro',
+        fontSize: 14.sp,
+        color: Colors.white,
+        //height: 1.64,
+      ),
+      
+    ),
+  );
+}

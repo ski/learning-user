@@ -97,7 +97,7 @@ class _LoginBeforeHomeState extends State<LoginBeforeHome> {
 
   String dropdownValue = 'Suhail Manzoor';
   String dropdownCategory = 'Explore';
-final ScrollController controller = ScrollController();
+  final ScrollController controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -129,7 +129,7 @@ final ScrollController controller = ScrollController();
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         TextButton(
-                          onPressed:()=>Get.toNamed(loginbeforehome),
+                          onPressed: () => Get.toNamed(loginbeforehome),
                           child: Image.asset(
                             "assets/logo/logo.png",
                             height: 32.h,
@@ -172,150 +172,11 @@ final ScrollController controller = ScrollController();
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        DropdownButton<String>(
-                          value: dropdownCategory,
-                          icon: FaIcon(
-                            FontAwesomeIcons.caretDown,
-                            color: Colors.black,
-                            size: 15.w,
-                          ),
-                          iconSize: 24.w,
-                          elevation: 16,
-                          hint: Text(
-                            'Explore',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16.sp,
-                            ),
-                          ),
-                          dropdownColor:AppColors.isense_button,
-                          underline: Container(
-                            height: 1,
-                            color: Colors.transparent,
-                          ),
-                          onChanged: (String? newValue) {
-                            setState(() {
-                              dropdownCategory = newValue!;
-                            });
-                          },
-                          items: <String>[
-                            'Explore',
-                            'Explore2',
-                            'Explore3',
-                          ].map<DropdownMenuItem<String>>((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: Padding(
-                                padding: EdgeInsets.only(right: 20.w),
-                                child: Text(
-                                  value,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 16.sp,
-                                  ),
-                                ),
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                        SizedBox(
-                          width: 30.w,
-                        ),
-                        TextButton(
-                          onPressed:()=>Get.toNamed(businesspage),
-                          child: Text(
-                            'Business',
-                            style: TextStyle(
-                              fontFamily: 'SF Pro',
-                              fontSize: 16.sp,
-                              color: AppColors.isense_primary,
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 30.w,
-                        ),
-                        Stack(
-                          overflow: Overflow.visible,
-                          children: [
-                            TextButton(
-                              onPressed:()=>Get.toNamed(shoppingcart),
-                              child: Icon(
-                                Icons.shopping_cart,
-                                size: 20.w,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Positioned(
-                                 bottom: 26.h,
-                              left:32.w,
-                              child: Container(
-                                  height: 19.h,
-                                  width: 19.h,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    // borderRadius: BorderRadius.all(Radius.elliptical(999.0, 999.0)),
-                                    color: Color(0xfff9bc7d),
-                                  ),
-                                  child: Center(
-                                    child: Text("3",
-                                        style: TextStyle(fontSize: 8)),
-                                  )),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          width: 30.w,
-                        ),
-                       
-                        TextButton(
-                           onPressed:()=>Get.toNamed(loginafterhome),
-                          child: Container(
-                            height: 40.h,
-                            width: 100.w,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(4.r),
-                                color: AppColors.isense_button),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                FaIcon(FontAwesomeIcons.user,size: 14.w,color: AppColors.isense_white,),
-                                // Image.asset(
-                                //   "assets/icons/user.png",
-                                //   height: 30.h,
-                                // width: 15.w,
-                                //  // fit: BoxFit.contain
-                                // ),
-                                SizedBox(
-                                  width: 10.w,
-                                ),
-                                Text(
-                                  'Sign In',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro',
-                                    fontSize: 14.sp,
-                                    color: Color(0xffffffff),
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.53,
-                                  ),
-                                  textHeightBehavior: TextHeightBehavior(
-                                      applyHeightToFirstAscent: false),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    )
                   ],
                 ),
               ),
             ),
-             //Topbar section ends here
+            //Topbar section ends here
             //Header section starts here
             Container(
               height: 660.h,
@@ -377,14 +238,11 @@ final ScrollController controller = ScrollController();
                               height: 45.h,
                               width: 140.w,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(8.r)
-                                )
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.r))),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(8.r)
-                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8.r)),
                                 child: Image.asset(
                                   'assets/logo/playstore.png',
                                   fit: BoxFit.cover,
@@ -398,14 +256,11 @@ final ScrollController controller = ScrollController();
                               height: 45.h,
                               width: 140.w,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(8.r)
-                                )
-                              ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8.r))),
                               child: ClipRRect(
-                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(8.r)
-                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8.r)),
                                 child: Image.asset(
                                   'assets/logo/appstore.png',
                                   fit: BoxFit.cover,
@@ -505,161 +360,172 @@ final ScrollController controller = ScrollController();
                       Container(
                         height: 310.h,
                         child: ScrollConfiguration(
-                           behavior: MyCustomScrollBehavior(),
+                          behavior: MyCustomScrollBehavior(),
                           child: ListView.builder(
-                            controller: controller,
+                              controller: controller,
                               scrollDirection: Axis.horizontal,
                               itemCount: categorytext.length,
                               itemBuilder: (context, index) {
-                                return Padding(
-                                  padding: EdgeInsets.only(right: 20.w),
-                                  child: Container(
-                                      height: 300.h,
-                                      width: 260.w,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10.r),
-                                        image: DecorationImage(
-                                            image:
-                                                AssetImage(featured_image[index]),
-                                            fit: BoxFit.cover),
-                                      ),
-                                      child: Container(
+                                return InkWell(
+                                  onTap: () => Get.toNamed(courseDetails),
+                                  child: Padding(
+                                    padding: EdgeInsets.only(right: 20.w),
+                                    child: Container(
                                         height: 300.h,
                                         width: 260.w,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10.r),
-                                          gradient: LinearGradient(
-                                            begin: Alignment(-0.06, -1.0),
-                                            end: Alignment(-0.05, 1.05),
-                                            colors: [
-                                              Color(0x00000000),
-                                              Color(0x99000000),
-                                              Color(0x71000000)
-                                            ],
-                                            stops: [0.0, 0.834, 1.0],
-                                          ),
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Color(0x111b3950),
-                                              offset: Offset(0, 2),
-                                              blurRadius: 10,
+                                          image: DecorationImage(
+                                              image: AssetImage(
+                                                  featured_image[index]),
+                                              fit: BoxFit.cover),
+                                        ),
+                                        child: Container(
+                                          height: 300.h,
+                                          width: 260.w,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10.r),
+                                            gradient: LinearGradient(
+                                              begin: Alignment(-0.06, -1.0),
+                                              end: Alignment(-0.05, 1.05),
+                                              colors: [
+                                                Color(0x00000000),
+                                                Color(0x99000000),
+                                                Color(0x71000000)
+                                              ],
+                                              stops: [0.0, 0.834, 1.0],
                                             ),
-                                          ],
-                                        ),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(20.w),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              TextButton(
-                                                onPressed:()=>Get.toNamed(shoppingcart),
-                                                child: Container(
-                                                  height: 35,
-                                                  width: 35,
-                                                  decoration: BoxDecoration(
-                                                      color: Colors.black
-                                                          .withOpacity(0.25),
-                                                      shape: BoxShape.circle),
-                                                  child: Center(
-                                                      child: Icon(
-                                                          Icons
-                                                              .shopping_cart_outlined,
-                                                          size: 18.w,
-                                                          color: Colors.white)),
-                                                ),
-                                              ),
-                                              Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    '\$200',
-                                                    style: TextStyle(
-                                                      fontFamily: 'SF Pro',
-                                                      fontSize: 19.sp,
-                                                      color:
-                                                          AppColors.isense_white,
-                                                      fontWeight: FontWeight.w700,
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 7.h,
-                                                  ),
-                                                  Text(
-                                                    featured_courses[index],
-                                                    style: TextStyle(
-                                                      fontFamily: 'SF Pro',
-                                                      fontSize: 14.sp,
-                                                      color:
-                                                          AppColors.isense_white,
-                                                      fontWeight: FontWeight.w500,
-                                                    ),
-                                                  ),
-                                                  SizedBox(
-                                                    height: 40.h,
-                                                  ),
-                                                  Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
-                                                      Row(
-                                                        children: [
-                                                          Icon(
-                                                            Icons.folder,
-                                                            size: 12.w,
-                                                            color: Colors.white,
-                                                          ),
-                                                          SizedBox(
-                                                            width: 5.w,
-                                                          ),
-                                                          Text(
-                                                            '15 Lessons ',
-                                                            style: TextStyle(
-                                                              fontFamily:
-                                                                  'SF Pro',
-                                                              fontSize: 12.sp,
-                                                              color: AppColors
-                                                                  .isense_white,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      Row(
-                                                        children: [
-                                                          FaIcon(
-                                                            FontAwesomeIcons
-                                                                .clock,
-                                                            size: 12.w,
-                                                            color: Colors.white,
-                                                          ),
-                                                          SizedBox(
-                                                            width: 5.w,
-                                                          ),
-                                                          Text(
-                                                            '60h',
-                                                            style: TextStyle(
-                                                              fontFamily:
-                                                                  'SF Pro',
-                                                              fontSize: 12.sp,
-                                                              color: AppColors
-                                                                  .isense_white,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ],
-                                                  )
-                                                ],
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Color(0x111b3950),
+                                                offset: Offset(0, 2),
+                                                blurRadius: 10,
                                               ),
                                             ],
                                           ),
-                                        ),
-                                      )),
+                                          child: Padding(
+                                            padding: EdgeInsets.all(20.w),
+                                            child: Column(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                TextButton(
+                                                  onPressed: () =>
+                                                      Get.toNamed(shoppingcart),
+                                                  child: Container(
+                                                    height: 35,
+                                                    width: 35,
+                                                    decoration: BoxDecoration(
+                                                        color: Colors.black
+                                                            .withOpacity(0.25),
+                                                        shape: BoxShape.circle),
+                                                    child: Center(
+                                                        child: Icon(
+                                                            Icons
+                                                                .shopping_cart_outlined,
+                                                            size: 18.w,
+                                                            color:
+                                                                Colors.white)),
+                                                  ),
+                                                ),
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      '\$200',
+                                                      style: TextStyle(
+                                                        fontFamily: 'SF Pro',
+                                                        fontSize: 19.sp,
+                                                        color: AppColors
+                                                            .isense_white,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 7.h,
+                                                    ),
+                                                    Text(
+                                                      featured_courses[index],
+                                                      style: TextStyle(
+                                                        fontFamily: 'SF Pro',
+                                                        fontSize: 14.sp,
+                                                        color: AppColors
+                                                            .isense_white,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      height: 40.h,
+                                                    ),
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .spaceBetween,
+                                                      children: [
+                                                        Row(
+                                                          children: [
+                                                            Icon(
+                                                              Icons.folder,
+                                                              size: 12.w,
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                            SizedBox(
+                                                              width: 5.w,
+                                                            ),
+                                                            Text(
+                                                              '15 Lessons ',
+                                                              style: TextStyle(
+                                                                fontFamily:
+                                                                    'SF Pro',
+                                                                fontSize: 12.sp,
+                                                                color: AppColors
+                                                                    .isense_white,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            FaIcon(
+                                                              FontAwesomeIcons
+                                                                  .clock,
+                                                              size: 12.w,
+                                                              color:
+                                                                  Colors.white,
+                                                            ),
+                                                            SizedBox(
+                                                              width: 5.w,
+                                                            ),
+                                                            Text(
+                                                              '60h',
+                                                              style: TextStyle(
+                                                                fontFamily:
+                                                                    'SF Pro',
+                                                                fontSize: 12.sp,
+                                                                color: AppColors
+                                                                    .isense_white,
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ],
+                                                    )
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        )),
+                                  ),
                                 );
                               }),
                         ),
@@ -782,154 +648,168 @@ final ScrollController controller = ScrollController();
                     Container(
                       height: 310.h,
                       child: ScrollConfiguration(
-                         behavior: MyCustomScrollBehavior(),
+                        behavior: MyCustomScrollBehavior(),
                         child: ListView.builder(
-                          controller: controller,
+                            controller: controller,
                             scrollDirection: Axis.horizontal,
                             itemCount: categorytext.length,
                             itemBuilder: (context, index) {
-                              return Padding(
-                                padding: EdgeInsets.only(right: 20.w),
-                                child: Container(
-                                    height: 300.h,
-                                    width: 260.w,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10.r),
-                                      image: DecorationImage(
-                                          image: AssetImage(popular_image[index]),
-                                          fit: BoxFit.cover),
-                                    ),
-                                    child: Container(
+                              return InkWell(
+                                onTap: () => Get.toNamed(courseDetails),
+                                child: Padding(
+                                  padding: EdgeInsets.only(right: 20.w),
+                                  child: Container(
                                       height: 300.h,
                                       width: 260.w,
                                       decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10.r),
-                                        gradient: LinearGradient(
-                                          begin: Alignment(-0.06, -1.0),
-                                          end: Alignment(-0.05, 1.05),
-                                          colors: [
-                                            Color(0x00000000),
-                                            Color(0x99000000),
-                                            Color(0x71000000)
-                                          ],
-                                          stops: [0.0, 0.834, 1.0],
-                                        ),
-                                        boxShadow: [
-                                          BoxShadow(
-                                            color: Color(0x111b3950),
-                                            offset: Offset(0, 2),
-                                            blurRadius: 10,
+                                        borderRadius:
+                                            BorderRadius.circular(10.r),
+                                        image: DecorationImage(
+                                            image: AssetImage(
+                                                popular_image[index]),
+                                            fit: BoxFit.cover),
+                                      ),
+                                      child: Container(
+                                        height: 300.h,
+                                        width: 260.w,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10.r),
+                                          gradient: LinearGradient(
+                                            begin: Alignment(-0.06, -1.0),
+                                            end: Alignment(-0.05, 1.05),
+                                            colors: [
+                                              Color(0x00000000),
+                                              Color(0x99000000),
+                                              Color(0x71000000)
+                                            ],
+                                            stops: [0.0, 0.834, 1.0],
                                           ),
-                                        ],
-                                      ),
-                                      child: Padding(
-                                        padding: EdgeInsets.all(20.w),
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            TextButton(
-                                              onPressed:()=>Get.toNamed(shoppingcart),
-                                              child: Container(
-                                                height: 35,
-                                                width: 35,
-                                                decoration: BoxDecoration(
-                                                    color: Colors.black
-                                                        .withOpacity(0.25),
-                                                    shape: BoxShape.circle),
-                                                child: Center(
-                                                    child: Icon(
-                                                        Icons
-                                                            .shopping_cart_outlined,
-                                                        size: 18.w,
-                                                        color: Colors.white)),
-                                              ),
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  '\$200',
-                                                  style: TextStyle(
-                                                    fontFamily: 'SF Pro',
-                                                    fontSize: 19.sp,
-                                                    color: AppColors.isense_white,
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 7.h,
-                                                ),
-                                                Text(
-                                                  featured_courses[index],
-                                                  style: TextStyle(
-                                                    fontFamily: 'SF Pro',
-                                                    fontSize: 14.sp,
-                                                    color: AppColors.isense_white,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: 40.h,
-                                                ),
-                                                Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceBetween,
-                                                  children: [
-                                                    Row(
-                                                      children: [
-                                                        Icon(
-                                                          Icons.folder,
-                                                          size: 12.w,
-                                                          color: Colors.white,
-                                                        ),
-                                                        SizedBox(
-                                                          width: 5.w,
-                                                        ),
-                                                        Text(
-                                                          '15 Lessons ',
-                                                          style: TextStyle(
-                                                            fontFamily: 'SF Pro',
-                                                            fontSize: 12.sp,
-                                                            color: AppColors
-                                                                .isense_white,
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    Row(
-                                                      children: [
-                                                        FaIcon(
-                                                          FontAwesomeIcons.clock,
-                                                          size: 12.w,
-                                                          color: Colors.white,
-                                                        ),
-                                                        SizedBox(
-                                                          width: 5.w,
-                                                        ),
-                                                        Text(
-                                                          '60h',
-                                                          style: TextStyle(
-                                                            fontFamily: 'SF Pro',
-                                                            fontSize: 12.sp,
-                                                            color: AppColors
-                                                                .isense_white,
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ],
-                                                )
-                                              ],
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color: Color(0x111b3950),
+                                              offset: Offset(0, 2),
+                                              blurRadius: 10,
                                             ),
                                           ],
                                         ),
-                                      ),
-                                    )),
+                                        child: Padding(
+                                          padding: EdgeInsets.all(20.w),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              TextButton(
+                                                onPressed: () =>
+                                                    Get.toNamed(shoppingcart),
+                                                child: Container(
+                                                  height: 35,
+                                                  width: 35,
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.black
+                                                          .withOpacity(0.25),
+                                                      shape: BoxShape.circle),
+                                                  child: Center(
+                                                      child: Icon(
+                                                          Icons
+                                                              .shopping_cart_outlined,
+                                                          size: 18.w,
+                                                          color: Colors.white)),
+                                                ),
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    '\$200',
+                                                    style: TextStyle(
+                                                      fontFamily: 'SF Pro',
+                                                      fontSize: 19.sp,
+                                                      color: AppColors
+                                                          .isense_white,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 7.h,
+                                                  ),
+                                                  Text(
+                                                    featured_courses[index],
+                                                    style: TextStyle(
+                                                      fontFamily: 'SF Pro',
+                                                      fontSize: 14.sp,
+                                                      color: AppColors
+                                                          .isense_white,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 40.h,
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
+                                                      Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.folder,
+                                                            size: 12.w,
+                                                            color: Colors.white,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 5.w,
+                                                          ),
+                                                          Text(
+                                                            '15 Lessons ',
+                                                            style: TextStyle(
+                                                              fontFamily:
+                                                                  'SF Pro',
+                                                              fontSize: 12.sp,
+                                                              color: AppColors
+                                                                  .isense_white,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      Row(
+                                                        children: [
+                                                          FaIcon(
+                                                            FontAwesomeIcons
+                                                                .clock,
+                                                            size: 12.w,
+                                                            color: Colors.white,
+                                                          ),
+                                                          SizedBox(
+                                                            width: 5.w,
+                                                          ),
+                                                          Text(
+                                                            '60h',
+                                                            style: TextStyle(
+                                                              fontFamily:
+                                                                  'SF Pro',
+                                                              fontSize: 12.sp,
+                                                              color: AppColors
+                                                                  .isense_white,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      )),
+                                ),
                               );
                             }),
                       ),
@@ -938,8 +818,8 @@ final ScrollController controller = ScrollController();
                 ),
               ),
             ),
-             //Popular section ends here
-             //Benifit section starts here
+            //Popular section ends here
+            //Benifit section starts here
             Container(
               height: 600.h,
               width: 1400.w,
@@ -1004,62 +884,38 @@ final ScrollController controller = ScrollController();
                     children: [
                       Row(
                         children: [
-                          InstructorImage(
-                              'assets/images/instructor_img1.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img2.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img3.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img4.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img5.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img6.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img7.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img8.png'),
+                          InstructorImage('assets/images/instructor_img1.png'),
+                          InstructorImage('assets/images/instructor_img2.png'),
+                          InstructorImage('assets/images/instructor_img3.png'),
+                          InstructorImage('assets/images/instructor_img4.png'),
+                          InstructorImage('assets/images/instructor_img5.png'),
+                          InstructorImage('assets/images/instructor_img6.png'),
+                          InstructorImage('assets/images/instructor_img7.png'),
+                          InstructorImage('assets/images/instructor_img8.png'),
                         ],
                       ),
                       Row(
                         children: [
-                          InstructorImage(
-                              'assets/images/instructor_img9.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img10.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img3.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img4.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img5.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img6.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img11.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img8.png'),
+                          InstructorImage('assets/images/instructor_img9.png'),
+                          InstructorImage('assets/images/instructor_img10.png'),
+                          InstructorImage('assets/images/instructor_img3.png'),
+                          InstructorImage('assets/images/instructor_img4.png'),
+                          InstructorImage('assets/images/instructor_img5.png'),
+                          InstructorImage('assets/images/instructor_img6.png'),
+                          InstructorImage('assets/images/instructor_img11.png'),
+                          InstructorImage('assets/images/instructor_img8.png'),
                         ],
                       ),
                       Row(
                         children: [
-                          InstructorImage(
-                              'assets/images/instructor_img8.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img11.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img6.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img1.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img8.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img2.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img3.png'),
-                          InstructorImage(
-                              'assets/images/instructor_img4.png'),
+                          InstructorImage('assets/images/instructor_img8.png'),
+                          InstructorImage('assets/images/instructor_img11.png'),
+                          InstructorImage('assets/images/instructor_img6.png'),
+                          InstructorImage('assets/images/instructor_img1.png'),
+                          InstructorImage('assets/images/instructor_img8.png'),
+                          InstructorImage('assets/images/instructor_img2.png'),
+                          InstructorImage('assets/images/instructor_img3.png'),
+                          InstructorImage('assets/images/instructor_img4.png'),
                         ],
                       ),
                     ],
@@ -1159,7 +1015,7 @@ final ScrollController controller = ScrollController();
                     ))
               ],
             ),
-             //Instructor section ends here
+            //Instructor section ends here
             //Testimonials section starts here
             Container(
               height: 620.h,
@@ -1192,12 +1048,13 @@ final ScrollController controller = ScrollController();
                       child: ScrollConfiguration(
                         behavior: MyCustomScrollBehavior(),
                         child: ListView.builder(
-                          controller: controller,
+                            controller: controller,
                             scrollDirection: Axis.horizontal,
                             itemCount: testimonials_category.length,
                             itemBuilder: (context, index) {
                               return Padding(
-                                padding: EdgeInsets.only(top: 20.w, right: 30.w),
+                                padding:
+                                    EdgeInsets.only(top: 20.w, right: 30.w),
                                 child: Container(
                                   height: 320.h,
                                   width: 360.w,
@@ -1249,8 +1106,8 @@ final ScrollController controller = ScrollController();
                                                   style: TextStyle(
                                                     fontFamily: 'SF Pro',
                                                     fontSize: 16.sp,
-                                                    color:
-                                                        AppColors.isense_primary,
+                                                    color: AppColors
+                                                        .isense_primary,
                                                     fontWeight: FontWeight.w600,
                                                   ),
                                                 ),
@@ -1288,7 +1145,7 @@ final ScrollController controller = ScrollController();
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             TextButton(
-                              onPressed:()=>Get.toNamed(loginbeforehome),
+                              onPressed: () => Get.toNamed(loginbeforehome),
                               child: Image.asset(
                                 "assets/logo/logofooter.png",
                                 height: 32.h,
@@ -1454,37 +1311,36 @@ final ScrollController controller = ScrollController();
 class MyCustomScrollBehavior extends MaterialScrollBehavior {
   // Override behavior methods and getters like dragDevices
   @override
-  Set<PointerDeviceKind> get dragDevices => { 
-    PointerDeviceKind.touch,
-    PointerDeviceKind.mouse,
-    // etc.
-  };
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        // etc.
+      };
 }
 
-  Widget ArrowButton(icon, onpress) {
-    return Container(
-      height: 40.h,
-      width: 40.w,
-      decoration: BoxDecoration(
-          color: AppColors.isense_primary.withOpacity(0.05),
-          shape: BoxShape.circle),
-      child: Center(
-          child: IconButton(
-        icon: Icon(icon, size: 16.w, color: AppColors.isense_primary),
-        onPressed: onpress,
-      )),
-    );
-  }
+Widget ArrowButton(icon, onpress) {
+  return Container(
+    height: 40.h,
+    width: 40.w,
+    decoration: BoxDecoration(
+        color: AppColors.isense_primary.withOpacity(0.05),
+        shape: BoxShape.circle),
+    child: Center(
+        child: IconButton(
+      icon: Icon(icon, size: 16.w, color: AppColors.isense_primary),
+      onPressed: onpress,
+    )),
+  );
+}
 
-  Widget VirticallyDividerWidget() {
-    return SizedBox(
-        height: 100.h,
-        child: VerticalDivider(
-          width: 1,
-          color: AppColors.sectionBackground.withOpacity(0.3),
-        ));
-  }
-
+Widget VirticallyDividerWidget() {
+  return SizedBox(
+      height: 100.h,
+      child: VerticalDivider(
+        width: 1,
+        color: AppColors.sectionBackground.withOpacity(0.3),
+      ));
+}
 
 Widget FooterTitle(String title) {
   return Text(
